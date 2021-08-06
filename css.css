@@ -1,0 +1,104 @@
+/* body{
+  display: flex;
+  flex-direction: column;
+  color: black;
+
+}  */
+#toast{
+  position: fixed;
+  top: 32px;
+  right: 380px;
+}
+.toast{
+  position: fixed;
+  display: flex;
+  margin-top: 20px;
+  padding: 20px 0;
+  align-items: center;
+  background-color:rgb(245, 244, 244);
+  border-radius: 3px;
+  border-left: 4px solid;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+  max-width: 400px;
+  min-width: 350px;
+  animation: slide ease 0.3s, fadeOut linear 1s 2s forwards;
+}
+@keyframes slide{
+  from{
+    transform: translate(380px);
+    opacity: 0;
+  }
+  to{
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to{
+    opacity: 0;
+
+  }
+}
+
+.toast__body{
+  flex-grow: 1;
+  color: black;
+}
+.toast__icon{
+  padding: 0 8px ;
+  font-size: 20px;
+  margin:0px 10px 0px 10px;
+}
+.toast__close{
+  padding: 0 8px ;
+  cursor: pointer;
+  font-size: 20px;
+  margin:0px 10px 0px 10px;
+  transition: opacity .2s ease ;
+}
+.toast__close:hover{
+  opacity: 0.5;
+}
+.toast--success>.toast__icon{
+  color: green;
+}
+.toast__title{
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.toast--success{
+  border-color: rgba(11, 236, 22, 0.884);
+}
+
+/* ---------------btn---------------- */
+.btn{
+  display: inline;
+  padding: 14px 48px;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity .2s ease;
+  outline: none;
+  border: none;
+  color: aliceblue;
+}
+.btn:hover{
+  opacity: 0.8;
+}
+.btn + .btn{
+  margin-left: 20px;
+}
+.btn__success{
+}
+.btn__warn{}
+.btn__danger{}
+.btn--success{
+ background-color:green;
+}
+.btn--warn{
+  background-color: rgb(230, 154, 15);
+}
+.btn--danger{
+  background-color: rgb(255, 60, 0);
+}
